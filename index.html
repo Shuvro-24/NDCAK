@@ -1,0 +1,2475 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Notre Dame College Association of KUET</title>
+
+    <meta name="description"
+          content="Official website of Notre Dame College Association of KUET">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+          rel="stylesheet">
+
+    <style>
+        /* =========================
+           GLOBAL
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            color: #172033;
+            background: #f7f9fc;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        button {
+            font-family: inherit;
+        }
+
+        .container {
+            width: min(1180px, 92%);
+            margin: auto;
+        }
+
+        .section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-title span {
+            color: #a67c00;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .section-title h2 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(32px, 4vw, 46px);
+            color: #12254a;
+            margin-top: 8px;
+        }
+
+        .section-title p {
+            max-width: 650px;
+            margin: 12px auto 0;
+            color: #687386;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 13px 24px;
+            border-radius: 5px;
+            border: 1px solid transparent;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #122d5b;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #0b1e40;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border-color: #d3a72c;
+            color: #9a7300;
+            background: white;
+        }
+
+        .btn-outline:hover {
+            background: #d3a72c;
+            color: white;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255,255,255,0.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #e9edf3;
+        }
+
+        .navbar {
+            min-height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-logo {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+
+        .brand-text strong {
+            display: block;
+            color: #122d5b;
+            font-size: 15px;
+            line-height: 1.2;
+        }
+
+        .brand-text small {
+            color: #8a6a13;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 27px;
+            align-items: center;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 13px;
+            font-weight: 600;
+            color: #39465a;
+            transition: 0.25s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #a67c00;
+        }
+
+        .menu-btn {
+            display: none;
+            border: 0;
+            background: transparent;
+            font-size: 27px;
+            cursor: pointer;
+            color: #122d5b;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+            padding-top: 78px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background:
+                linear-gradient(90deg,
+                    rgba(7,23,52,0.96) 0%,
+                    rgba(7,23,52,0.88) 45%,
+                    rgba(7,23,52,0.55) 100%),
+                url("images/image1.jpg") center/cover;
+        }
+
+        .hero-content {
+            max-width: 780px;
+            color: white;
+        }
+
+        .hero-label {
+            display: inline-block;
+            padding: 7px 13px;
+            border: 1px solid rgba(255,255,255,0.3);
+            background: rgba(255,255,255,0.08);
+            border-radius: 30px;
+            font-size: 12px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(42px, 6vw, 72px);
+            line-height: 1.08;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 span {
+            color: #e3bb49;
+        }
+
+        .hero p {
+            max-width: 680px;
+            font-size: 17px;
+            color: #e2e7f0;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 13px;
+            flex-wrap: wrap;
+        }
+
+        .hero .btn-primary {
+            background: #d2a82f;
+            color: #172033;
+        }
+
+        .hero .btn-primary:hover {
+            background: #e4bd55;
+        }
+
+        .hero .btn-outline {
+            background: transparent;
+            color: white;
+            border-color: rgba(255,255,255,0.55);
+        }
+
+        .hero .btn-outline:hover {
+            background: white;
+            color: #122d5b;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            height: 460px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .about-image::after {
+            content: "";
+            position: absolute;
+            left: -15px;
+            bottom: -15px;
+            width: 100px;
+            height: 100px;
+            border-left: 4px solid #d2a82f;
+            border-bottom: 4px solid #d2a82f;
+            z-index: 0;
+        }
+
+        .about-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-content .eyebrow {
+            color: #a67c00;
+            font-weight: 700;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .about-content h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 40px;
+            color: #122d5b;
+            margin: 10px 0 20px;
+        }
+
+        .about-content p {
+            color: #667085;
+            margin-bottom: 15px;
+        }
+
+        .mission-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .mission-box {
+            padding: 20px;
+            border: 1px solid #e5e9ef;
+            border-radius: 7px;
+            background: #fafbfd;
+        }
+
+        .mission-box h4 {
+            color: #122d5b;
+            margin-bottom: 7px;
+        }
+
+        .mission-box p {
+            font-size: 13px;
+            margin: 0;
+        }
+
+
+        /* =========================
+           STATS
+        ========================= */
+
+        .stats {
+            background: #122d5b;
+            color: white;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            text-align: center;
+        }
+
+        .stat {
+            padding: 25px;
+            border-right: 1px solid rgba(255,255,255,0.15);
+        }
+
+        .stat:last-child {
+            border-right: none;
+        }
+
+        .stat h3 {
+            font-size: 38px;
+            color: #e3bb49;
+        }
+
+        .stat p {
+            font-size: 13px;
+            color: #d7deea;
+        }
+
+
+        /* =========================
+           PANEL
+        ========================= */
+
+        .panel {
+            background: #f7f9fc;
+        }
+
+        .panel-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .member-card {
+            background: white;
+            border: 1px solid #e5e9ef;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .member-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 40px rgba(18,45,91,0.10);
+        }
+
+        .member-photo {
+            height: 280px;
+            overflow: hidden;
+        }
+
+        .member-photo img {
+            height: 100%;
+            object-fit: cover;
+            transition: 0.4s;
+        }
+
+        .member-card:hover .member-photo img {
+            transform: scale(1.04);
+        }
+
+        .member-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .member-info h3 {
+            color: #122d5b;
+            font-size: 17px;
+            margin-bottom: 5px;
+        }
+
+        .member-info .position {
+            color: #a67c00;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.7px;
+        }
+
+        .member-info .batch {
+            color: #7b8494;
+            font-size: 12px;
+            margin: 7px 0 15px;
+        }
+
+        .view-profile {
+            width: 100%;
+            padding: 9px;
+            border: 1px solid #d9dee7;
+            background: white;
+            color: #122d5b;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+            transition: 0.25s;
+        }
+
+        .view-profile:hover {
+            background: #122d5b;
+            color: white;
+        }
+
+
+        /* =========================
+           ADVISORS
+        ========================= */
+
+        .advisors {
+            background: white;
+        }
+
+        .advisor-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .advisor-card {
+            display: flex;
+            gap: 18px;
+            align-items: center;
+            padding: 22px;
+            border: 1px solid #e5e9ef;
+            background: #fff;
+            border-radius: 8px;
+        }
+
+        .advisor-card img {
+            width: 95px;
+            height: 95px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #e2c25d;
+        }
+
+        .advisor-card h3 {
+            color: #122d5b;
+            font-size: 16px;
+        }
+
+        .advisor-card p {
+            font-size: 12px;
+            color: #7b8494;
+            margin-top: 5px;
+        }
+
+
+        /* =========================
+           EVENTS
+        ========================= */
+
+        .events {
+            background: #f7f9fc;
+        }
+
+        .event-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .event-card {
+            background: white;
+            border: 1px solid #e5e9ef;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .event-card img {
+            height: 230px;
+            object-fit: cover;
+        }
+
+        .event-content {
+            padding: 20px;
+        }
+
+        .event-date {
+            color: #a67c00;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .event-content h3 {
+            color: #122d5b;
+            font-size: 19px;
+            margin: 7px 0;
+        }
+
+        .event-content p {
+            color: #7b8494;
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================
+           GALLERY
+        ========================= */
+
+        .gallery {
+            background: white;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+
+        .gallery-item {
+            height: 230px;
+            overflow: hidden;
+            cursor: pointer;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .gallery-item img {
+            height: 100%;
+            object-fit: cover;
+            transition: 0.4s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.07);
+        }
+
+
+        /* =========================
+           NOTICES
+        ========================= */
+
+        .notices {
+            background: #f7f9fc;
+        }
+
+        .notice-list {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .notice {
+            background: white;
+            padding: 20px 24px;
+            border: 1px solid #e5e9ef;
+            margin-bottom: 12px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .notice-date {
+            color: #a67c00;
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .notice h3 {
+            color: #122d5b;
+            font-size: 15px;
+            margin-top: 4px;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            background: #122d5b;
+            color: white;
+        }
+
+        .contact .section-title h2 {
+            color: white;
+        }
+
+        .contact .section-title p {
+            color: #cdd6e4;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-info h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .contact-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: grid;
+            place-items: center;
+            color: #e3bb49;
+            flex-shrink: 0;
+        }
+
+        .contact-item strong {
+            display: block;
+            font-size: 13px;
+        }
+
+        .contact-item span {
+            color: #cbd4e2;
+            font-size: 13px;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        .contact-form h3 {
+            color: #122d5b;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 14px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            border: 1px solid #dce1e8;
+            padding: 12px 13px;
+            border-radius: 4px;
+            font-family: inherit;
+            outline: none;
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #a67c00;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #091a36;
+            color: #bfc9d8;
+            padding: 30px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .footer-content p {
+            font-size: 12px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+            font-size: 12px;
+        }
+
+        .footer-links a:hover {
+            color: #e3bb49;
+        }
+
+
+        /* =========================
+           MODAL
+        ========================= */
+
+        .modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(5,15,30,0.78);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal.show {
+            display: flex;
+        }
+
+        .modal-box {
+            background: white;
+            width: min(650px, 100%);
+            max-height: 90vh;
+            overflow-y: auto;
+            border-radius: 9px;
+            position: relative;
+            animation: modalIn 0.25s ease;
+        }
+
+        @keyframes modalIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .close-modal {
+            position: absolute;
+            right: 18px;
+            top: 15px;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            border: 0;
+            background: rgba(0,0,0,0.07);
+            cursor: pointer;
+            font-size: 20px;
+            z-index: 2;
+        }
+
+        .profile-modal {
+            padding: 35px;
+            text-align: center;
+        }
+
+        .profile-modal img {
+            width: 145px;
+            height: 145px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: auto;
+            border: 5px solid #e3c866;
+        }
+
+        .profile-modal h2 {
+            color: #122d5b;
+            font-family: "Playfair Display", serif;
+            margin-top: 17px;
+        }
+
+        .profile-position {
+            color: #a67c00;
+            font-weight: 700;
+            font-size: 13px;
+        }
+
+        .profile-details {
+            margin-top: 25px;
+            text-align: left;
+            border-top: 1px solid #e5e9ef;
+        }
+
+        .profile-detail {
+            padding: 12px 0;
+            border-bottom: 1px solid #e5e9ef;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .profile-detail strong {
+            color: #122d5b;
+        }
+
+        .profile-detail span {
+            color: #687386;
+            text-align: right;
+        }
+
+        .profile-actions {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+
+
+        /* =========================
+           IMAGE MODAL
+        ========================= */
+
+        .image-modal-box {
+            background: transparent;
+            width: min(1000px, 100%);
+            position: relative;
+        }
+
+        .image-modal-box img {
+            max-height: 85vh;
+            object-fit: contain;
+            border-radius: 5px;
+        }
+
+
+        /* =========================
+           BACK TO TOP
+        ========================= */
+
+        #backToTop {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            width: 45px;
+            height: 45px;
+            border: none;
+            border-radius: 50%;
+            background: #d2a82f;
+            color: #172033;
+            font-size: 18px;
+            cursor: pointer;
+            display: none;
+            z-index: 900;
+        }
+
+        #backToTop.show {
+            display: block;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 1000px) {
+
+            .panel-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .advisor-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+        }
+
+
+        @media (max-width: 768px) {
+
+            .section {
+                padding: 70px 0;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 78px;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                gap: 18px;
+                border-bottom: 1px solid #e5e9ef;
+                display: none;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image img {
+                height: 350px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .stat {
+                border-bottom: 1px solid rgba(255,255,255,0.15);
+            }
+
+            .advisor-grid,
+            .event-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .notice {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+
+        @media (max-width: 500px) {
+
+            .brand-text strong {
+                font-size: 12px;
+            }
+
+            .brand-text small {
+                font-size: 9px;
+            }
+
+            .brand-logo {
+                width: 40px;
+                height: 40px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .panel-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .mission-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .gallery-item {
+                height: 170px;
+            }
+
+            .profile-modal {
+                padding: 25px 18px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<header>
+
+    <div class="container navbar">
+
+        <a href="#home" class="brand">
+
+            <img src="images/logo.png"
+                 alt="NDC Association Logo"
+                 class="brand-logo">
+
+            <div class="brand-text">
+                <strong>Notre Dame College Association</strong>
+                <small>University of Engineering & Technology</small>
+            </div>
+
+        </a>
+
+
+        <button class="menu-btn" id="menuBtn">
+            ☰
+        </button>
+
+
+        <ul class="nav-links" id="navLinks">
+
+            <li><a href="#home" class="active">Home</a></li>
+
+            <li><a href="#about">About</a></li>
+
+            <li><a href="#panel">Executive Panel</a></li>
+
+            <li><a href="#advisors">Advisors</a></li>
+
+            <li><a href="#events">Events</a></li>
+
+            <li><a href="#gallery">Gallery</a></li>
+
+            <li><a href="#notices">Notices</a></li>
+
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="hero-label">
+                Notre Dame College • KUET
+            </div>
+
+            <h1>
+                Notre Dame College
+                <span>Association</span>
+                of KUET
+            </h1>
+
+            <p>
+                Connecting Notre Dame College alumni and students
+                at Khulna University of Engineering & Technology
+                through friendship, leadership, academic excellence
+                and meaningful initiatives.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#about" class="btn btn-primary">
+                    Explore Association
+                </a>
+
+                <a href="#panel" class="btn btn-outline">
+                    Meet Our Panel
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="section about" id="about">
+
+    <div class="container">
+
+        <div class="about-grid">
+
+            <div class="about-image">
+
+                <img src="images/image2.jpg"
+                     alt="NDC Association">
+
+            </div>
+
+
+            <div class="about-content">
+
+                <span class="eyebrow">
+                    About the Association
+                </span>
+
+                <h2>
+                    A Community Beyond Campus
+                </h2>
+
+                <p>
+                    Notre Dame College Association of KUET is a
+                    platform that brings together students and
+                    alumni of Notre Dame College currently studying
+                    or associated with Khulna University of
+                    Engineering & Technology.
+                </p>
+
+                <p>
+                    The association aims to strengthen friendship,
+                    professional networking, leadership and
+                    collaboration among its members while
+                    preserving the values and traditions of
+                    Notre Dame College.
+                </p>
+
+
+                <div class="mission-grid">
+
+                    <div class="mission-box">
+
+                        <h4>Our Mission</h4>
+
+                        <p>
+                            To build a supportive and connected
+                            NDC community within KUET.
+                        </p>
+
+                    </div>
+
+
+                    <div class="mission-box">
+
+                        <h4>Our Vision</h4>
+
+                        <p>
+                            To create a responsible, united and
+                            impactful alumni-student network.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     STATS
+========================= -->
+
+<section class="stats">
+
+    <div class="container stats-grid">
+
+        <div class="stat">
+            <h3>100+</h3>
+            <p>Members</p>
+        </div>
+
+        <div class="stat">
+            <h3>10+</h3>
+            <p>Events</p>
+        </div>
+
+        <div class="stat">
+            <h3>10+</h3>
+            <p>Years of Connection</p>
+        </div>
+
+        <div class="stat">
+            <h3>1</h3>
+            <p>United Community</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     EXECUTIVE PANEL
+========================= -->
+
+<section class="section panel" id="panel">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Leadership</span>
+
+            <h2>Executive Panel</h2>
+
+            <p>
+                Meet the dedicated members responsible for
+                leading and coordinating the association.
+            </p>
+
+        </div>
+
+
+        <div class="panel-grid" id="panelGrid">
+            <!-- JavaScript will load members -->
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ADVISORS
+========================= -->
+
+<section class="section advisors" id="advisors">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Guidance</span>
+
+            <h2>Advisors & Teachers</h2>
+
+            <p>
+                Faculty members and respected mentors associated
+                with our community.
+            </p>
+
+        </div>
+
+
+        <div class="advisor-grid">
+
+            <div class="advisor-card">
+
+                <img src="images/teacher1.jpg"
+                     alt="Teacher">
+
+                <div>
+                    <h3>Teacher Name</h3>
+
+                    <p>
+                        Designation<br>
+                        Department
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="advisor-card">
+
+                <img src="images/teacher2.jpg"
+                     alt="Teacher">
+
+                <div>
+                    <h3>Teacher Name</h3>
+
+                    <p>
+                        Designation<br>
+                        Department
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="advisor-card">
+
+                <img src="images/teacher3.jpg"
+                     alt="Teacher">
+
+                <div>
+                    <h3>Teacher Name</h3>
+
+                    <p>
+                        Designation<br>
+                        Department
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     EVENTS
+========================= -->
+
+<section class="section events" id="events">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Activities</span>
+
+            <h2>Events & Activities</h2>
+
+            <p>
+                A glimpse of the programs and activities
+                organized by the association.
+            </p>
+
+        </div>
+
+
+        <div class="event-grid">
+
+            <article class="event-card">
+
+                <img src="images/poster1.jpg"
+                     alt="Event Poster">
+
+                <div class="event-content">
+
+                    <span class="event-date">
+                        Event Date
+                    </span>
+
+                    <h3>
+                        Event Name One
+                    </h3>
+
+                    <p>
+                        Short description of the event,
+                        program or activity.
+                    </p>
+
+                    <button class="btn btn-outline"
+                            onclick="openImage('images/poster1.jpg')">
+                        View Poster
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <article class="event-card">
+
+                <img src="images/poster2.jpg"
+                     alt="Event Poster">
+
+                <div class="event-content">
+
+                    <span class="event-date">
+                        Event Date
+                    </span>
+
+                    <h3>
+                        Event Name Two
+                    </h3>
+
+                    <p>
+                        Short description of the event,
+                        program or activity.
+                    </p>
+
+                    <button class="btn btn-outline"
+                            onclick="openImage('images/poster2.jpg')">
+                        View Poster
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <article class="event-card">
+
+                <img src="images/poster3.jpg"
+                     alt="Event Poster">
+
+                <div class="event-content">
+
+                    <span class="event-date">
+                        Event Date
+                    </span>
+
+                    <h3>
+                        Event Name Three
+                    </h3>
+
+                    <p>
+                        Short description of the event,
+                        program or activity.
+                    </p>
+
+                    <button class="btn btn-outline"
+                            onclick="openImage('images/poster3.jpg')">
+                        View Poster
+                    </button>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     GALLERY
+========================= -->
+
+<section class="section gallery" id="gallery">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Memories</span>
+
+            <h2>Photo Gallery</h2>
+
+            <p>
+                Moments, memories and activities of our community.
+            </p>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+            <div class="gallery-item"
+                 onclick="openImage('images/image3.jpg')">
+
+                <img src="images/image3.jpg"
+                     alt="Gallery Image">
+
+            </div>
+
+
+            <div class="gallery-item"
+                 onclick="openImage('images/image4.jpg')">
+
+                <img src="images/image4.jpg"
+                     alt="Gallery Image">
+
+            </div>
+
+
+            <div class="gallery-item"
+                 onclick="openImage('images/image5.jpg')">
+
+                <img src="images/image5.jpg"
+                     alt="Gallery Image">
+
+            </div>
+
+
+            <div class="gallery-item"
+                 onclick="openImage('images/image6.jpg')">
+
+                <img src="images/image6.jpg"
+                     alt="Gallery Image">
+
+            </div>
+
+
+            <div class="gallery-item"
+                 onclick="openImage('images/image7.jpg')">
+
+                <img src="images/image7.jpg"
+                     alt="Gallery Image">
+
+            </div>
+
+
+            <div class="gallery-item"
+                 onclick="openImage('images/image8.jpg')">
+
+                <img src="images/image8.jpg"
+                     alt="Gallery Image">
+
+            </div>
+
+
+            <div class="gallery-item"
+                 onclick="openImage('images/image9.jpg')">
+
+                <img src="images/image9.jpg"
+                     alt="Gallery Image">
+
+            </div>
+
+
+            <div class="gallery-item"
+                 onclick="openImage('images/image10.jpg')">
+
+                <img src="images/image10.jpg"
+                     alt="Gallery Image">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     NOTICES
+========================= -->
+
+<section class="section notices" id="notices">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Information</span>
+
+            <h2>Notices & Announcements</h2>
+
+            <p>
+                Latest official announcements from the association.
+            </p>
+
+        </div>
+
+
+        <div class="notice-list">
+
+            <div class="notice">
+
+                <div>
+
+                    <span class="notice-date">
+                        07 October 2026
+                    </span>
+
+                    <h3>
+                        Notice Title One
+                    </h3>
+
+                </div>
+
+                <button class="btn btn-outline"
+                        onclick="showNotice('Notice Title One')">
+                    View
+                </button>
+
+            </div>
+
+
+            <div class="notice">
+
+                <div>
+
+                    <span class="notice-date">
+                        01 October 2026
+                    </span>
+
+                    <h3>
+                        Notice Title Two
+                    </h3>
+
+                </div>
+
+                <button class="btn btn-outline"
+                        onclick="showNotice('Notice Title Two')">
+                    View
+                </button>
+
+            </div>
+
+
+            <div class="notice">
+
+                <div>
+
+                    <span class="notice-date">
+                        25 September 2026
+                    </span>
+
+                    <h3>
+                        Notice Title Three
+                    </h3>
+
+                </div>
+
+                <button class="btn btn-outline"
+                        onclick="showNotice('Notice Title Three')">
+                    View
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="section contact" id="contact">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Get In Touch</span>
+
+            <h2>Contact Association</h2>
+
+            <p>
+                For official communication, collaboration,
+                events and membership-related queries.
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+            <div class="contact-info">
+
+                <h3>
+                    Notre Dame College Association of KUET
+                </h3>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        ✉
+                    </div>
+
+                    <div>
+
+                        <strong>Email</strong>
+
+                        <span>
+                            ndcassociation.kuet@gmail.com
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        ☎
+                    </div>
+
+                    <div>
+
+                        <strong>Phone</strong>
+
+                        <span>
+                            +880 1XXXXXXXXX
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        📍
+                    </div>
+
+                    <div>
+
+                        <strong>Location</strong>
+
+                        <span>
+                            Khulna University of Engineering
+                            & Technology, Khulna, Bangladesh
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        f
+                    </div>
+
+                    <div>
+
+                        <strong>Facebook</strong>
+
+                        <span>
+                            Official Facebook Page
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-form">
+
+                <h3>
+                    Send a Message
+                </h3>
+
+                <form onsubmit="sendMessage(event)">
+
+                    <div class="form-group">
+
+                        <input type="text"
+                               id="name"
+                               placeholder="Your Name"
+                               required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <input type="email"
+                               id="email"
+                               placeholder="Your Email"
+                               required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <textarea id="message"
+                                  placeholder="Your Message"
+                                  required></textarea>
+
+                    </div>
+
+
+                    <button class="btn btn-primary"
+                            type="submit">
+
+                        Send Message
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container footer-content">
+
+        <p>
+            © 2026 Notre Dame College Association of KUET.
+            All Rights Reserved.
+        </p>
+
+        <div class="footer-links">
+
+            <a href="#home">Home</a>
+
+            <a href="#about">About</a>
+
+            <a href="#panel">Panel</a>
+
+            <a href="#contact">Contact</a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================
+     PROFILE MODAL
+========================= -->
+
+<div class="modal" id="profileModal">
+
+    <div class="modal-box">
+
+        <button class="close-modal"
+                onclick="closeProfile()">
+            ×
+        </button>
+
+        <div class="profile-modal">
+
+            <img id="modalImage"
+                 src=""
+                 alt="Member">
+
+            <h2 id="modalName">
+                Member Name
+            </h2>
+
+            <div class="profile-position"
+                 id="modalPosition">
+                Position
+            </div>
+
+
+            <div class="profile-details">
+
+                <div class="profile-detail">
+
+                    <strong>Department</strong>
+
+                    <span id="modalDepartment">
+                        —
+                    </span>
+
+                </div>
+
+
+                <div class="profile-detail">
+
+                    <strong>Batch</strong>
+
+                    <span id="modalBatch">
+                        —
+                    </span>
+
+                </div>
+
+
+                <div class="profile-detail">
+
+                    <strong>Email</strong>
+
+                    <span id="modalEmail">
+                        —
+                    </span>
+
+                </div>
+
+
+                <div class="profile-detail">
+
+                    <strong>Phone</strong>
+
+                    <span id="modalPhone">
+                        —
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-actions">
+
+                <a id="emailButton"
+                   class="btn btn-primary"
+                   href="#">
+                    Email
+                </a>
+
+                <a id="phoneButton"
+                   class="btn btn-outline"
+                   href="#">
+                    Call
+                </a>
+
+                <a id="facebookButton"
+                   class="btn btn-outline"
+                   href="#"
+                   target="_blank">
+                    Facebook
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================
+     IMAGE MODAL
+========================= -->
+
+<div class="modal" id="imageModal"
+     onclick="closeImage()">
+
+    <div class="image-modal-box">
+
+        <button class="close-modal"
+                onclick="closeImage()">
+            ×
+        </button>
+
+        <img id="largeImage"
+             src=""
+             alt="Full Image">
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================
+     BACK TO TOP
+========================= -->
+
+<button id="backToTop"
+        onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    ↑
+</button>
+
+
+
+<script>
+
+    /* =========================
+       EXECUTIVE PANEL DATA
+    ========================= */
+
+    const members = [
+
+        {
+            
+            position: "President",
+            department: "Department of ECE",
+            batch: "KUET 2023",
+            email: "member1@example.com",
+            phone: "+8801700000001",
+            facebook: "https://facebook.com/",
+            image: "images/member1.jpg"
+        },
+
+        {
+           
+            position: "Vice President",
+            department: "Department of CSE",
+            batch: "KUET 2023",
+            email: "member2@example.com",
+            phone: "+8801700000002",
+            facebook: "https://facebook.com/",
+            image: "images/member2.jpg"
+        },
+
+        {
+           
+            position: "General Secretary",
+            department: "Department of EEE",
+            batch: "KUET 2024",
+            email: "member3@example.com",
+            phone: "+8801700000003",
+            facebook: "https://facebook.com/",
+            image: "images/member3.jpg"
+        },
+
+        {
+           
+            position: "Joint Secretary",
+            department: "Department of ME",
+            batch: "KUET 2024",
+            email: "member4@example.com",
+            phone: "+8801700000004",
+            facebook: "https://facebook.com/",
+            image: "images/member4.jpg"
+        },
+
+        {
+            
+            position: "Treasurer",
+            department: "Department of CE",
+            batch: "KUET 2024",
+            email: "member5@example.com",
+            phone: "+8801700000005",
+            facebook: "https://facebook.com/",
+            image: "images/member5.jpg"
+        },
+
+        {
+            
+            position: "Organizing Secretary",
+            department: "Department of ECE",
+            batch: "KUET 2024",
+            email: "member6@example.com",
+            phone: "+8801700000006",
+            facebook: "https://facebook.com/",
+            image: "images/member6.jpg"
+        },
+
+        {
+            
+            position: "Cultural Secretary",
+            department: "Department of CSE",
+            batch: "KUET 2025",
+            email: "member7@example.com",
+            phone: "+8801700000007",
+            facebook: "https://facebook.com/",
+            image: "images/member7.jpg"
+        },
+
+        {
+            
+            position: "Publicity Secretary",
+            department: "Department of EEE",
+            batch: "KUET 2025",
+            email: "member8@example.com",
+            phone: "+8801700000008",
+            facebook: "https://facebook.com/",
+            image: "images/member8.jpg"
+        }
+
+    ];
+
+
+    /* =========================
+       LOAD PANEL
+    ========================= */
+
+    const panelGrid = document.getElementById("panelGrid");
+
+    members.forEach((member, index) => {
+
+        const card = document.createElement("div");
+
+        card.className = "member-card";
+
+        card.innerHTML = `
+
+            <div class="member-photo">
+
+                <img src="${member.image}"
+                     alt="${member.name}">
+
+            </div>
+
+            <div class="member-info">
+
+                <h3>${member.name}</h3>
+
+                <div class="position">
+                    ${member.position}
+                </div>
+
+                <div class="batch">
+                    ${member.department} • ${member.batch}
+                </div>
+
+                <button class="view-profile"
+                        onclick="openProfile(${index})">
+
+                    View Profile
+
+                </button>
+
+            </div>
+
+        `;
+
+        panelGrid.appendChild(card);
+
+    });
+
+
+    /* =========================
+       PROFILE MODAL
+    ========================= */
+
+    function openProfile(index) {
+
+        const member = members[index];
+
+        document.getElementById("modalImage").src = member.image;
+
+        document.getElementById("modalName").textContent =
+            member.name;
+
+        document.getElementById("modalPosition").textContent =
+            member.position;
+
+        document.getElementById("modalDepartment").textContent =
+            member.department;
+
+        document.getElementById("modalBatch").textContent =
+            member.batch;
+
+        document.getElementById("modalEmail").textContent =
+            member.email;
+
+        document.getElementById("modalPhone").textContent =
+            member.phone;
+
+        document.getElementById("emailButton").href =
+            "mailto:" + member.email;
+
+        document.getElementById("phoneButton").href =
+            "tel:" + member.phone;
+
+        document.getElementById("facebookButton").href =
+            member.facebook;
+
+        document.getElementById("profileModal")
+            .classList.add("show");
+
+        document.body.style.overflow = "hidden";
+
+    }
+
+
+    function closeProfile() {
+
+        document.getElementById("profileModal")
+            .classList.remove("show");
+
+        document.body.style.overflow = "";
+
+    }
+
+
+
+    /* =========================
+       IMAGE LIGHTBOX
+    ========================= */
+
+    function openImage(src) {
+
+        document.getElementById("largeImage").src = src;
+
+        document.getElementById("imageModal")
+            .classList.add("show");
+
+        document.body.style.overflow = "hidden";
+
+    }
+
+
+    function closeImage() {
+
+        document.getElementById("imageModal")
+            .classList.remove("show");
+
+        document.body.style.overflow = "";
+
+    }
+
+
+    /* =========================
+       NOTICE
+    ========================= */
+
+    function showNotice(title) {
+
+        alert(
+            title +
+            "\n\nOfficial notice details can be added here."
+        );
+
+    }
+
+
+    /* =========================
+       CONTACT FORM
+    ========================= */
+
+    function sendMessage(event) {
+
+        event.preventDefault();
+
+        const name =
+            document.getElementById("name").value;
+
+        const email =
+            document.getElementById("email").value;
+
+        const message =
+            document.getElementById("message").value;
+
+        const subject =
+            encodeURIComponent(
+                "Website Contact - " + name
+            );
+
+        const body =
+            encodeURIComponent(
+                "Name: " + name +
+                "\nEmail: " + email +
+                "\n\nMessage:\n" + message
+            );
+
+        window.location.href =
+            "mailto:ndcassociation.kuet@gmail.com" +
+            "?subject=" + subject +
+            "&body=" + body;
+
+    }
+
+
+    /* =========================
+       MOBILE MENU
+    ========================= */
+
+    const menuBtn =
+        document.getElementById("menuBtn");
+
+    const navLinks =
+        document.getElementById("navLinks");
+
+
+    menuBtn.addEventListener("click", () => {
+
+        navLinks.classList.toggle("show");
+
+    });
+
+
+    document.querySelectorAll(".nav-links a")
+        .forEach(link => {
+
+            link.addEventListener("click", () => {
+
+                navLinks.classList.remove("show");
+
+            });
+
+        });
+
+
+    /* =========================
+       ACTIVE NAVBAR
+    ========================= */
+
+    const sections =
+        document.querySelectorAll("section[id]");
+
+    const navItems =
+        document.querySelectorAll(".nav-links a");
+
+
+    window.addEventListener("scroll", () => {
+
+        let current = "";
+
+        sections.forEach(section => {
+
+            const sectionTop =
+                section.offsetTop - 120;
+
+            if (window.scrollY >= sectionTop) {
+
+                current = section.getAttribute("id");
+
+            }
+
+        });
+
+
+        navItems.forEach(item => {
+
+            item.classList.remove("active");
+
+            if (
+                item.getAttribute("href") ===
+                "#" + current
+            ) {
+
+                item.classList.add("active");
+
+            }
+
+        });
+
+    });
+
+
+    /* =========================
+       BACK TO TOP
+    ========================= */
+
+    const backToTop =
+        document.getElementById("backToTop");
+
+
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 500) {
+
+            backToTop.classList.add("show");
+
+        } else {
+
+            backToTop.classList.remove("show");
+
+        }
+
+    });
+
+
+    /* =========================
+       CLOSE MODALS
+       CLICK OUTSIDE
+    ========================= */
+
+    document.getElementById("profileModal")
+        .addEventListener("click", function(event) {
+
+            if (event.target === this) {
+
+                closeProfile();
+
+            }
+
+        });
+
+
+    document.addEventListener("keydown", function(event) {
+
+        if (event.key === "Escape") {
+
+            closeProfile();
+            closeImage();
+
+        }
+
+    });
+
+</script>
+
+</body>
+</html>
+```
